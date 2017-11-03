@@ -21,7 +21,7 @@
     - [filter.py](information-gathering/filter.py)
 
     ```
-    用途: 分类提取某个文件或文件中所有可能的域名、邮件帐户、内部ip、外网ip;
+    用途: 分类提取某个文件或文件夹中所有可能的域名、邮件帐户、内部ip、外网ip;
           再也不用傻瓜式的一个个手工复制粘贴了,表示伤不起。
     
     用法: python filter.py file_or_dir [domain_limit(可选)]

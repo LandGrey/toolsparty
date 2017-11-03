@@ -69,7 +69,7 @@ if __name__ == "__main__":
     internal_ip = []
     external_ip = []
 
-    common_ip_pattern = re.compile('((\d{3}\.){3}\d{3})')
+    common_ip_pattern = re.compile('((\d{1,3}\.){3}\d{1,3})')
     domain_pattern = re.compile('((((\d|\w)*)\.)+[a-zA_Z]{2,})')
     mail_pattern = re.compile('(.*?@((((\d|\w)*)\.)+[a-zA_Z]{2,}))')
     internal_ip_pattern = re.compile(r'(^10\.((\d){1,3}\.){2}(\d){1,3})|'
@@ -83,10 +83,10 @@ if __name__ == "__main__":
         with open(sys.argv[1], 'r') as f:
             for row in f.readlines():
                 run(row.strip(), strict)
-    print("[+]          mails (%s)" % len(unique(mails)))
+    print("[+]          mails       (%s)" % len(unique(mails)))
     for m in unique(mails):
         print(m)
-    print("\n[+]        domains (%s)" % len(unique(domains)))
+    print("\n[+]        domains     (%s)" % len(unique(domains)))
     for d in unique(domains):
         print(d)
     print("\n[+]        internal ip (%s)" % len(unique(internal_ip)))
