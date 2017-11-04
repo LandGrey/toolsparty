@@ -69,13 +69,13 @@ if __name__ == "__main__":
     internal_ip = []
     external_ip = []
 
-    common_ip_pattern = re.compile('((\d{1,3}\.){3}\d{1,3})')
+    common_ip_pattern = re.compile('((\d{1,3}\.){3}\d{1,3}(/\d{2})?)')
     domain_pattern = re.compile('((((\d|\w)*)\.)+[a-zA_Z]{2,})')
     mail_pattern = re.compile('(.*?@((((\d|\w)*)\.)+[a-zA_Z]{2,}))')
-    internal_ip_pattern = re.compile(r'(^10\.((\d){1,3}\.){2}(\d){1,3})|'
-                                     r'(^127\.((\d){1,3}\.){2}(\d){1,3}$)|'
-                                     r'(^172\.([1][6-9]|[2][0-9]|[3][0-1])\.(\d){1,3}\.(\d){1,3})|'
-                                     r'(^192\.168\.(\d){1,3}\.(\d){1,3})')
+    internal_ip_pattern = re.compile(r'(^10\.((\d){1,3}\.){2}(\d){1,3}(/\d{2})?)|'
+                                     r'(^127\.((\d){1,3}\.){2}(\d){1,3}(/\d{2})?)|'
+                                     r'(^172\.([1][6-9]|[2][0-9]|[3][0-1])\.(\d){1,3}\.(\d){1,3}(/\d{2})?)|'
+                                     r'(^192\.168\.(\d){1,3}\.(\d){1,3}(/\d{2})?)')
     if os.path.isdir(sys.argv[1]):
         for row in walk_all_files(sys.argv[1]):
             run(row, strict)
@@ -83,7 +83,7 @@ if __name__ == "__main__":
         with open(sys.argv[1], 'r') as f:
             for row in f.readlines():
                 run(row.strip(), strict)
-    print("[+]          mails       (%s)" % len(unique(mails)))
+    print("[+]        mails       (%s)" % len(unique(mails)))
     for m in unique(mails):
         print(m)
     print("\n[+]        domains     (%s)" % len(unique(domains)))
