@@ -8,6 +8,11 @@
 
 ## 详情：
 
+```
+1. 按照工具可能被用的渗透测试阶段分类,并不唯一
+2. 名字以"* "开头的工具,表示不在本仓库内,可到链接地址下载
+```
+
 * 信息收集
 
     - [crtsh.py](information-gathering/crtsh.py)
@@ -25,4 +30,12 @@
           再也不用傻瓜式的一个个手工复制粘贴了,表示伤不起。
     
     用法: python filter.py file_or_dir [domain_limit(可选)]
+    ```
+    - [* uniqifer](https://github.com/LandGrey/pydictor)
+
+    ```
+    用途: 对爆破字典、域名等文本保持原来顺序的去重;
+          pydictor 的内置功能,避免自己造轮子。
+    
+    用法: python pydictor.py -tool uniqifer file_path
     ```

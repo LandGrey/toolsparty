@@ -50,10 +50,10 @@ def run(line, limit=False):
     domains.extend([dm[0] for dm in domain_matches] if not limit else [d[0] for d in domain_matches if d[0].endswith(limit)])
     internal_ip_matches = internal_ip_pattern.findall(line)
     if internal_ip_matches:
-        internal_ip.extend([im[0] for im in internal_ip_matches])
+        internal_ip.extend([y for x in internal_ip_matches for y in x if len(y) >= 7])
     else:
         external_ip_matches = common_ip_pattern.findall(line)
-        external_ip.extend([em[0] for em in external_ip_matches])
+        external_ip.extend([y for x in external_ip_matches for y in x if len(y) >= 7])
 
 
 if __name__ == "__main__":
@@ -72,10 +72,10 @@ if __name__ == "__main__":
     common_ip_pattern = re.compile('((\d{1,3}\.){3}\d{1,3}(/\d{2})?)')
     domain_pattern = re.compile('((((\d|\w)*)\.)+[a-zA_Z]{2,})')
     mail_pattern = re.compile('(.*?@((((\d|\w)*)\.)+[a-zA_Z]{2,}))')
-    internal_ip_pattern = re.compile(r'(^10\.((\d){1,3}\.){2}(\d){1,3}(/\d{2})?)|'
-                                     r'(^127\.((\d){1,3}\.){2}(\d){1,3}(/\d{2})?)|'
-                                     r'(^172\.([1][6-9]|[2][0-9]|[3][0-1])\.(\d){1,3}\.(\d){1,3}(/\d{2})?)|'
-                                     r'(^192\.168\.(\d){1,3}\.(\d){1,3}(/\d{2})?)')
+    internal_ip_pattern = re.compile(r'(10\.((\d){1,3}\.){2}(\d){1,3}(/\d{2})?)|'
+                                     r'(127\.((\d){1,3}\.){2}(\d){1,3}(/\d{2})?)|'
+                                     r'(172\.(1[6-9]|2[0-9]|3[0-1])\.\d{1,3}\.(\d){1,3}(/\d{2})?)|'
+                                     r'(192\.168\.(\d){1,3}\.(\d){1,3}(/\d{2})?)')
     if os.path.isdir(sys.argv[1]):
         for row in walk_all_files(sys.argv[1]):
             run(row, strict)
