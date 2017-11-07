@@ -1,7 +1,7 @@
 # toolsparty
 
 ```
-顾名思义, 自己写的渗透测试中常用的一些小脚本, 人生苦短, 节省生命.
+顾名思义, 自己写的、收集的渗透测试中常用的一些小脚本(非工具), 人生苦短, 节省生命.
 上传至此, 防止像以前一样, 写完就丢, 也算个积累吧. 
 ```
 
@@ -24,6 +24,15 @@
           pydictor 的内置功能,避免自己造轮子。
     
     用法: python pydictor.py -tool counter [v,s,vs] [file_path] [view_num]
+    ```
+
+    - [* domain_to_ip](https://github.com/LandGrey/taoman/blob/master/other/domain_to_ip.py)
+
+    ```
+    用途: 多线程批量将域名解析成IP地址;
+          利用socket.gethostbyname()函数,没有深究其精准程度。
+    
+    用法: python domain_to_ip.py [domain_lists_path]
     ```
     - [filter.py](information-gathering/filter.py)
 
@@ -62,7 +71,15 @@
     ```
 
 * 杂项
+    
+    - [* dnstricker](https://github.com/LandGrey/dnstricker/blob/master/dnstricker.py)
 
+    ```
+    用途: 监听本地端口,响应配置好的DNS记录;
+          logeyes平台的一部分,用来模拟dns请求的响应。
+    
+    用法: python domain_to_ip.py [domain_lists_path]
+    ```
     - [getFileType.py](miscellaneous/getFileType.py)
 
     ```
