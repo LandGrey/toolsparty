@@ -72,6 +72,14 @@
 
 * 杂项
     
+    - [awvs.bat](miscellaneous/awvs.bat)
+
+    ```
+    用途: 将Windows平台上安装的AWVS服务设置为手动,需要时用此脚本开启服务;
+          将脚本放在"C:\Users\YourName"目录下,按win+r键,用awvs命令使用脚本。
+    
+    用法: 直接运行
+    ```
     - [* dnstricker](https://github.com/LandGrey/dnstricker/blob/master/dnstricker.py)
 
     ```
@@ -87,4 +95,20 @@
           早期写的代码,有点烂,可以修改源码里的数据字典,识别更多类型文件。
     
     用法: python getFileType.py [file_path]
+    ```
+    - [nessus.bat](miscellaneous/nessus.bat)
+
+    ```
+    用途: 将Windows平台上安装的Nessus服务设置为手动,需要时用此脚本开启服务;
+          将脚本放在"C:\Users\YourName"目录下,按win+r键,用nessus命令使用脚本。
+    
+    用法: 直接运行
+    ```
+    - [vpnTrafficSwitcher.bat](miscellaneous/vpnTrafficSwitcher.bat)
+
+    ```
+    用途: 使用Windows防火墙策略指定出口IP地址,防止使用VPN时真实流量外漏
+          适用于Windows7 及以上版本,其它版本按情况修改dos命令
+    
+    用法: 直接运行,"yes"启用策略,设置VPN的ip地址;"no"恢复原样.
     ```
