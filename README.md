@@ -75,9 +75,9 @@
 
 
     #### 目标收集
-
+    
     - [crtsh.py](information-gathering/crtsh.py)
-
+    
     ```
     用途: 使用https://crt.sh/网站, 根据网站域名证书来寻找使用同一证书的域名;
           对快速搜索同属于一个公司/组织的顶级域很有用。
@@ -85,7 +85,7 @@
     用法: python crtsh.py example.com
     ```
     - [owt.py](information-gathering/owt.py)
-
+    
     ```
     用途: 正确的批量获取网站Title。
     
@@ -126,6 +126,16 @@
     
     用法: 直接运行
     ```
+
+
+    - [* python-keywords](https://github.com/vergl4s/pentesting-dump/blob/fe0e89cad5da1080bad8efd7979fe38ad2e58e9e/wordlists/python-keywords.txt)
+
+    ```
+    用途: python 编程语言相关的一些关键词,可以用来 fuzz 相关特性和bug。
+    ```
+
+
+
     - [vpnTrafficSwitcher.bat](miscellaneous/vpnTrafficSwitcher.bat)
 
     ```
@@ -134,3 +144,4 @@
     
     用法: 直接运行,"yes"启用策略,设置VPN的ip地址;"no"恢复原样.
     ```
+
