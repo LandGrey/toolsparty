@@ -66,6 +66,14 @@
     用法: python ip-extender.py list.txt
     ```
 
+    - [* python_crypto](https://github.com/vergl4s/pentesting-dump/blob/fe0e89cad5da1080bad8efd7979fe38ad2e58e9e/snippets/python_crypto/README.MD)
+
+    ```
+    用途: 集成了较多python加解密相关的代码,用到了可以快速借鉴下相关代码。
+    ```
+
+
+
     #### 目标收集
 
     - [crtsh.py](information-gathering/crtsh.py)
