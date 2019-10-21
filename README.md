@@ -78,10 +78,12 @@
 
 - [crtsh.py](information-gathering/crtsh.py)
 
-    用途: 使用https://crt.sh/网站, 根据网站域名证书来寻找使用同一证书的域名;
-          对快速搜索同属于一个公司/组织的顶级域很有用。
-    
-    用法: python crtsh.py example.com
+
+```
+用途: 使用https://crt.sh/网站, 根据网站域名证书来寻找使用同一证书的域名;对快速搜索同属于一个公司/组织的顶级域很有用。
+
+用法: python crtsh.py example.com
+```
 
 - [owt.py](information-gathering/owt.py)
 
@@ -148,7 +150,7 @@
 ```
 用途: 批量反编译 jar 文件为 java 源码,代码审计常用
 
-(使用时将 decompiler.py fernflower.jar 放在同一目录下)
-用法: python decompiler.py -h
+用法: 使用时将项目中的 decompiler.py fernflower.jar 放在同一目录下。
+命令: python decompiler.py -h
 ```
 
